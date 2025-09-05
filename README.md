@@ -10,7 +10,7 @@ Ce dépôt contient une collection de petits programmes Python divers et variés
     ```
 2. Accédez au dossier du projet :
     ```bash
-    cd programmes
+    cd programmes\code
     ```
 3. Exécutez les programmes avec Python, par exemple :
     ```bash
