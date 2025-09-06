@@ -1,13 +1,9 @@
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt  # Importation de la bibliothèque matplotlib pour tracer des graphiques
 
-# Les valeurs pour l'axe X
-x = [1, 2, 3, 4]
+x = [1, 2, 3, 4]  # Liste représentant les coordonnées de l'axe X
 
-# Les valeurs pour l'axe Y
-y = [2, 4, 8, 16]
+y = [2, 4, 8, 16]  # Liste représentant les coordonnées de l'axe Y, qui sont les valeurs correspondantes de l'axe X
 
-# Fonction pour créer le graph
-plt.plot(x, y)
+plt.plot(x, y)  # Trace le graphique avec les valeurs de x sur l'axe des X et les valeurs de y sur l'axe des Y
 
-# Function pour montrer le graph
-plt.show()
+plt.show()  # Affiche le graphique dans une fenêtre de l'interface graphique de matplotlib
