@@ -96,7 +96,7 @@ Commande à exécuter :
 sudo chmod 751 monFichier
 ```
 
-### Valeurs courantes (chmod)
+### Valeurs courantes
 | Valeur | Description                                                                   |
 | ------ | ----------------------------------------------------------------------------- |
 | `644`  | Propriétaire : lecture/écriture ; autres : lecture                            |
