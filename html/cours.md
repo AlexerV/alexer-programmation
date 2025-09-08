@@ -454,7 +454,7 @@ Tu peux coller ton code HTML ou fournir une URL, et il te donnera un rapport ave
 
 - Attributs required, min, max, pattern, placeholder
 
-- Groupement avec <fieldset> et <legend>
+- Groupement avec `<fieldset>` et `<legend>`
 
 - Validation HTML5
 
@@ -462,13 +462,13 @@ Tu peux coller ton code HTML ou fournir une URL, et il te donnera un rapport ave
 
 - Fusion de cellules : rowspan, colspan
 
-- En-têtes de colonnes/ligne avec <thead>, <tbody>, <tfoot>
+- En-têtes de colonnes/ligne avec `<thead>`, `<tbody>`, `<tfoot>`
 
 - Accessibilité des tableaux
 
 ### 3. ✅ Balises sémantiques HTML5 (rapide récapitulatif ou schéma visuel)
 
-- <article>, <aside>, <main>, <nav>, <figure>, <figcaption>
+- `<article>`, `<aside>`, `<main>`, `<nav>`, `<figure>`, `<figcaption>`
 
 ### 4. ✅ Iframes
 
@@ -508,4 +508,4 @@ Tu peux coller ton code HTML ou fournir une URL, et il te donnera un rapport ave
 
 - Ordre de chargement des scripts (defer, async)
 
-- Lazy loading des images : loading="lazy"
+- Lazy loading des images : `loading="lazy"`
