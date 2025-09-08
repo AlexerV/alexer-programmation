@@ -1,22 +1,61 @@
-# Programmes Divers
+# 📚 Alexer - Programmation
 
-Ce dépôt contient une collection de petits programmes Python divers et variés. Les scripts dans ce répertoire sont indépendants les uns des autres et couvrent une gamme d'applications, mais sont tous stockés ici pour un accès facile.
+[![GitHub](https://img.shields.io/badge/GitHub-AlexerV-181717?logo=github)](https://github.com/AlexerV)<br>
+![Discord](https://img.shields.io/badge/Discord-.alexer-5865F2?logo=discord&logoColor=white)
 
-## Utilisation
+Bienvenue dans ce dépôt qui regroupe une **collection de cours, scripts, programmes et ressources** en lien avec plusieurs langages de programmation et outils systèmes.  
+Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du concret et structuré.
 
-1. Clonez ce dépôt :
-    ```bash
-    git clone https://github.com/AlexerV/programmes.git
-    ```
-2. Accédez au dossier du projet :
-    ```bash
-    cd programmes\code
-    ```
-3. Exécutez les programmes avec Python, par exemple :
-    ```bash
-    python3 <nom_du_script>.py
-    ```
+---
 
-## Contribuer
+## 🚀 Utilisation rapide
 
-Les contributions sont les bienvenues ! Si vous souhaitez ajouter de nouveaux programmes ou améliorer ceux existants, ouvrez une **issue** ou soumettez une **pull request**.
+1. **Cloner le dépôt :**
+```bash
+git clone https://github.com/AlexerV/alexer-programmation.git
+cd alexer-programmation
+```
+
+2. **Explorer un langage ou thème :**
+
+- Sous Linux/macOS
+```bash
+cd bash/
+cat cours.md
+ou
+less cours.md
+```
+`less`
+  - `Espace` pour avancer
+  - `B` pour reculer
+  - `Q` pour quitter
+
+Sous Windows(CMD)
+```bash
+cd bash/
+type cours.md
+```
+
+3. **Exécuter un script (exemple Python) :**
+```bash
+cd python/programmes
+python3 nom_du_script.py
+```
+
+---
+
+🤝 Tu peux ouvrir une **issue** ou proposer une **pull request** pour :
+
+- corriger une faute
+
+- ajouter un exemple
+
+- enrichir un cours
+
+---
+
+📩 Contact
+
+Projet maintenu par [Alexer](https://github.com/AlexerV)
+Contact :
+- Discord : `.alexer`
