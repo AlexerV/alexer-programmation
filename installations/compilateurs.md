@@ -3,6 +3,9 @@
 Ce document te guide pour installer les compilateurs/interpréteurs nécessaires pour différents langages de programmation sur une distribution Linux (ex : Ubuntu/Debian).
 > 💡 Utilise `sudo` si tu n’es pas root.
 
+💡 Si tu es sur **Windows** mais que tu veux compiler comme sur **Linux**, tu peux installer un terminal Linux minimal grâce à **WSL (Windows Subsystem for Linux)**.  
+👉 Consulte [ce guide pour installer WSL](../linux/installation.md) si ce n'est pas déjà fait.
+
 ---
 
 ## 📚 Sommaire
