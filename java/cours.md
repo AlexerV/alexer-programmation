@@ -29,6 +29,16 @@ javac MonProgramme.java
 java MonProgramme
 ```
 
+En Java, chaque fichier source (.java) contient généralement une ou plusieurs classes. Il existe cependant une règle importante à respecter :
+> Le nom du fichier doit être exactement le même que le nom de la classe déclarée comme `public` dans le fichier.
+
+Par exemple :
+- Si la classe s'appelle `MaClasse`, alors le fichier doit s'appeler `MaClasse.java`.
+- Si aucune classe dans le fichier n’est déclarée comme `public`, tu peux choisir un nom de fichier librement (mais c’est rare en pratique).
+> ⚠️ En cas de non-respect de cette règle, le programme ne compilera pas et une erreur sera renvoyée.
+
+Cela garantit une organisation claire des fichiers et facilite la maintenance des projets Java, surtout lorsqu'ils deviennent plus complexes.
+
 --- 
 
 ## Les bases
