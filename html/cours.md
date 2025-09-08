@@ -1,8 +1,31 @@
-# 🌐 HTML – Cours
+# HTML
 
-[![GitHub](https://img.shields.io/badge/GitHub-AlexerV-181717?logo=github)](https://github.com/AlexerV)<br>
-![Discord](https://img.shields.io/badge/Discord-.alexer-5865F2?logo=discord&logoColor=white)
+## 📖 Introduction à HTML
 
-Bienvenue dans la section HTML du dépôt !
+**HTML** signifie *HyperText Markup Language*. C’est un **langage de balisage** qui permet de créer le **contenu et la structure** des pages web.  
 
-Ce cours présente les bases essentielles du langage HTML, utilisé pour structurer les pages web. Il est destiné aux débutants souhaitant comprendre la logique des balises, des attributs et des structures courantes.
+💡 Il est souvent utilisé **avec CSS** (mise en forme) et **JavaScript** (interaction).
+
+```html
+.html    => extension des fichiers HTML
+<!-- ceci est un commentaire -->
+```
+
+---
+
+## Syntaxe de base
+HTML fonctionne avec des balises (ou "éléments") :
+```html
+<p>Mon chat est noir et blanc</p>
+```
+Explication :
+
+- `<p>` : balise ouvrante
+
+- `</p>` : balise fermante
+
+- `Mon chat est noir et blanc` : contenu
+
+- Élément HTML = balise ouvrante + contenu + balise fermante
+
+[ImageHTML1](./images/1html.png)
