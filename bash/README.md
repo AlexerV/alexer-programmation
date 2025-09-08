@@ -1,5 +1,8 @@
 # Cours Bash / Shell
 
+[![GitHub](https://img.shields.io/badge/GitHub-AlexerV-181717?logo=github)](https://github.com/AlexerV)<br>
+![Discord](https://img.shields.io/badge/Discord-.alexer-5865F2?logo=discord&logoColor=white)
+
 Ce dossier contient un **cours complet sur le shell Bash**, destiné aux débutants comme aux utilisateurs intermédiaires.
 
 - 📘 [Cours complet en Markdown](./cours.md)
