@@ -53,13 +53,13 @@ Après redémarrage :
 
 - Ouvrez le menu Démarrer
 
-<img width="279" height="47" alt="image" src="https://github.com/user-attachments/assets/5217af40-7bb9-4737-a9db-257ed5ab8da4" />
+![Menu Démarrer Linux](./Capture_decran_2024-02-09_183937.png)
 
 - Recherchez le nom de la distribution installée (ex : Ubuntu)
 
 - Cliquez dessus pour lancer votre terminal Linux
 
-<img width="724" height="602" alt="image" src="https://github.com/user-attachments/assets/490e0e34-5bd7-4f65-9447-e4e940292dc4" />
+![Terminal Linux lancé](./Capture_decran_2024-02-09_183859.png)
 
 
 ### Et après ?
