@@ -1,4 +1,4 @@
-# Cours Bash / Shell
+# Bash / Shell
 
 ---
 
