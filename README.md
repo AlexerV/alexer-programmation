@@ -18,9 +18,11 @@ cd alexer-programmation
 
 2. **Explorer un langage ou thème :**
 
+Remplacer `nom_du_langage` par `bash`, `python`, `java`, etc.
+
 - Sous Linux/macOS
 ```bash
-cd bash/
+cd nom_du_langage/
 cat cours.md
 ou
 less cours.md
@@ -32,24 +34,20 @@ less cours.md
 
 Sous Windows(CMD)
 ```bash
-cd bash/
+cd nom_du_langage/
 type cours.md
 ```
 
-3. **Exécuter un script (exemple Python) :**
-```bash
-cd python/programmes
-python3 nom_du_script.py
-```
+3. **Exécuter un script :**
+Chaque langage contient un sous-dossier `programmes/` (s’il y a des fichiers exécutables).
+
+>💡 Reporte-toi au `README.md` dans chaque dossier pour les instructions spécifiques d'exécutions.
 
 ---
 
 🤝 Tu peux ouvrir une **issue** ou proposer une **pull request** pour :
-
 - corriger une faute
-
 - ajouter un exemple
-
 - enrichir un cours
 
 ---
