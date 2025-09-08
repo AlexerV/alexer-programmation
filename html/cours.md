@@ -444,3 +444,68 @@ Il est important de vérifier la validité de son code HTML pour éviter les err
 Tu peux utiliser le validateur officiel du W3C ici : https://validator.w3.org/
 
 Tu peux coller ton code HTML ou fournir une URL, et il te donnera un rapport avec les erreurs et suggestions d’amélioration.
+
+---
+
+## À ajouter :
+### 1. ✅ Formulaires avancés (complément possible)
+
+- Champs spécifiques : email, tel, url, date, color, range, etc.
+
+- Attributs required, min, max, pattern, placeholder
+
+- Groupement avec <fieldset> et <legend>
+
+- Validation HTML5
+
+### 2. ✅ Tableaux avancés
+
+- Fusion de cellules : rowspan, colspan
+
+- En-têtes de colonnes/ligne avec <thead>, <tbody>, <tfoot>
+
+- Accessibilité des tableaux
+
+### 3. ✅ Balises sémantiques HTML5 (rapide récapitulatif ou schéma visuel)
+
+- <article>, <aside>, <main>, <nav>, <figure>, <figcaption>
+
+### 4. ✅ Iframes
+
+- Intégration de vidéos (YouTube), cartes (Google Maps), autres pages :
+```html
+<iframe src="https://example.com" width="400" height="300"></iframe>
+```
+
+### 5. ✅ Favicon
+
+- Comment ajouter une icône de site web dans l’onglet :
+```html
+<link rel="icon" type="image/png" href="favicon.png" />
+```
+
+### 6. ✅ Comment structurer un site web HTML simple
+
+- Avec un mini projet : page d’accueil + page contact + page à propos (avec liens internes)
+
+### 7. ✅ Responsive Design (Introduction)
+
+- Meta viewport (déjà vu)
+
+- Balises <picture>, srcset pour images adaptables
+
+- Introduction rapide au responsive + lien vers CSS
+
+### 8. ✅ Accessibilité web (avancé) (si tu veux aller plus loin)
+
+- Navigation clavier
+
+- Label associé aux champs (<label for="id">)
+
+- Rôles ARIA plus poussés
+
+### 9. ✅ Performance / bonnes pratiques
+
+- Ordre de chargement des scripts (defer, async)
+
+- Lazy loading des images : loading="lazy"
