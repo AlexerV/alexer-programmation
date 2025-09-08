@@ -1,5 +1,8 @@
 # 📘 Python – Cours
 
+[![GitHub](https://img.shields.io/badge/GitHub-AlexerV-181717?logo=github)](https://github.com/AlexerV)<br>
+![Discord](https://img.shields.io/badge/Discord-.alexer-5865F2?logo=discord&logoColor=white)
+
 Bienvenue dans la section Python du dépôt !  
 Vous trouverez ici un **cours structuré** pour bien débuter (ou revoir les bases) en Python, avec des **exemples concrets**, des **explications simples**, et des **scripts prêts à être testés**.
 
