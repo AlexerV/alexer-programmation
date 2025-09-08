@@ -1,6 +1,7 @@
 # 🐧 Installer une distribution Linux sur Windows avec WSL
 
-Ce guide explique comment installer une distribution Linux (comme Ubuntu) via le **terminal Windows**, en utilisant **WSL** (Windows Subsystem for Linux).
+> ⚠️ Ce guide permet d’installer **uniquement un terminal Linux** (ligne de commande) sous Windows.  
+> Il **n'inclut pas d'interface graphique** (comme GNOME, KDE, etc.).
 
 ---
 
@@ -52,11 +53,11 @@ Après redémarrage :
 
 - Ouvrez le menu Démarrer
 
+<img width="279" height="47" alt="image" src="https://github.com/user-attachments/assets/5217af40-7bb9-4737-a9db-257ed5ab8da4" />
+
 - Recherchez le nom de la distribution installée (ex : Ubuntu)
 
 - Cliquez dessus pour lancer votre terminal Linux
-
-<img width="279" height="47" alt="image" src="https://github.com/user-attachments/assets/5217af40-7bb9-4737-a9db-257ed5ab8da4" />
 
 <img width="724" height="602" alt="image" src="https://github.com/user-attachments/assets/490e0e34-5bd7-4f65-9447-e4e940292dc4" />
 
