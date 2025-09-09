@@ -39,12 +39,20 @@ g++ programme.cpp -o programme
 ## 📚 Ce que tu vas apprendre
 - ✅ Les bases du C
 - ✅ Déclaration des variables
+- ✅ Constantes et macros
+- ✅ Entrées / sorties
+- ✅ Chaînes de caractères
 - ✅ Opérations numériques
 - ✅ Conditions (`if` / `else`)
 - ✅ Boucles (`for` / `while`)
 - ✅ Fonctions
+- ✅ Tableaux
+- ✅ Pointeurs
+- ✅ Structures
+- ✅ Énumérations (enum)
+- ✅ Lire et écrire dans des fichiers
 - ✅ Passage au C++ (notion de `cout`, `cin`)
-- ✅ Exemple de programme complet
+- ✅ Aller plus loin en C++
 
 ---
 
