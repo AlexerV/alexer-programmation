@@ -11,4 +11,5 @@ node dom-node.js
 ```
 
 - Résultat → le HTML modifié sera affiché directement dans ton terminal.
+
 ![ResultatDOM](./ResultatDOM.png)
