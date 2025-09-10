@@ -298,3 +298,17 @@ switch (jour) {
 - Le DOM est la représentation de la page HTML en mémoire.
 - Avec JavaScript, on peut modifier le contenu (`innerText`, `innerHTML`), les styles (`element.style.color`), et même ajouter/supprimer des éléments (`appendChild`, `remove`).
 - C’est ce qui permet de rendre les pages interactives.
+
+### DOM avec un fichier `.html` :
+- Le JavaScript est directement intégré dans la page (via une balise `<script>`) ou lié avec un fichier externe. Le DOM correspond à la page en cours, et les changements sont visibles dans le navigateur.
+Exemple :
+```html
+<script src="script.js"></script>
+```
+- Un exemple avec un fichier [HTML](https://github.com/AlexerV/alexer-programmation/tree/main/javascript/programmes/Exemple%20Manipulation%20DOM)
+
+### DOM avec un fichier `.js` (Node.js + jsdom) :
+- Le DOM est simulé en mémoire (grâce à `jsdom` ou une autre librairie). Ici, il n’y a pas de page affichée, mais tu peux manipuler du HTML comme si c’était une vraie page, puis afficher le résultat dans la console/terminal.
+- Un exemple avec un fichier [Javascript](https://github.com/AlexerV/alexer-programmation/tree/main/javascript/programmes/Exemple%20Node%20%20DOM)
+
+> Avec un fichier `.html`, le DOM correspond à la page affichée dans le navigateur. Avec un fichier `.js` exécuté par Node.js, on peut simuler un DOM (ex. avec *jsdom*) pour manipuler du HTML directement depuis le terminal.
