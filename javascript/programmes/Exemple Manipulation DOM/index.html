@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemple global JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f9;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    #zone {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background: white;
+    }
+    .highlight {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 Démonstration JavaScript</h1>
+
+  <p id="demo">Texte initial</p>
+  <button id="changeBtn">Changer le texte</button>
+  <button id="addBtn">Ajouter un élément</button>
+
+  <div id="zone"></div>
+
+  <script>
+    // ======================
+    // Variables et affichage console
+    // ======================
+    let nom = "Alexer";
+    let age = 21;
+    console.log("Nom :", nom);
+    console.log("Âge :", age);
+
+    // ======================
+    // Conditions
+    // ======================
+    if (age >= 18) {
+      console.log("Adulte");
+    } else {
+      console.log("Mineur");
+    }
+
+    // ======================
+    // Boucles
+    // ======================
+    for (let i = 0; i < 3; i++) {
+      console.log("Boucle for → i =", i);
+    }
+
+    // ======================
+    // Tableaux
+    // ======================
+    let fruits = ["Pomme", "Banane", "Orange"];
+    fruits.forEach(fruit => console.log("Fruit :", fruit));
+
+    // ======================
+    // Objets
+    // ======================
+    let personne = { nom: "Alexer", age: 21 };
+    console.log("Personne :", personne);
+
+    // ======================
+    // Fonctions
+    // ======================
+    function addition(a, b) {
+      return a + b;
+    }
+    console.log("5 + 3 =", addition(5, 3));
+
+    const multiplication = (a, b) => a * b;
+    console.log("4 * 2 =", multiplication(4, 2));
+
+    // ======================
+    // Switch
+    // ======================
+    let jour = 2;
+    switch (jour) {
+      case 1:
+        console.log("Lundi");
+        break;
+      case 2:
+        console.log("Mardi");
+        break;
+      default:
+        console.log("Autre jour");
+    }
+
+    // ======================
+    // Manipulation DOM
+    // ======================
+    const demo = document.getElementById("demo");
+    const zone = document.getElementById("zone");
+    const changeBtn = document.getElementById("changeBtn");
+    const addBtn = document.getElementById("addBtn");
+
+    // Changer du texte et style
+    changeBtn.addEventListener("click", () => {
+      demo.innerText = "Texte modifié avec JavaScript 🎉";
+      demo.classList.add("highlight");
+    });
+
+    // Ajouter dynamiquement un élément
+    addBtn.addEventListener("click", () => {
+      let p = document.createElement("p");
+      p.innerText = "Nouvel élément ajouté ✔️";
+      zone.appendChild(p);
+    });
+  </script>
+</body>
+</html>
