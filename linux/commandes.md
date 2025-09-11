@@ -9,7 +9,11 @@ Ce document rassemble les commandes essentielles pour utiliser efficacement un t
 ## 📌 Sommaire
 
 1. [Commandes de base](#commandes-de-base)
-2. [Gestion des droits avec `chmod`](#gestion-des-droits-avec-chmod)
+2. [Navigation & gestion de fichiers](#navigation--gestion-de-fichiers)
+3. [Manipulation de texte](#manipulation-de-texte)
+4. [Système & processus](#système--processus)
+5. [Réseau](#réseau)
+6. [Gestion des droits avec `chmod`](#gestion-des-droits-avec-chmod)
    - [Types d'utilisateurs](#types-dutilisateurs)
    - [Types de droits](#types-de-droits)
    - [Correspondances binaire/octale](#correspondances-binaire--octale)
@@ -22,28 +26,80 @@ Ce document rassemble les commandes essentielles pour utiliser efficacement un t
 
 ## 🧰 Commandes de base
 
-| Commande        | Description |
-|-----------------|-------------|
-| `ls`            | Lister le contenu d’un répertoire |
-| `pwd`           | Afficher le répertoire de travail actuel |
-| `cd`            | Changer de répertoire (`cd home/`) |
-| `cp`            | Copier des fichiers ou répertoires (`cp fichier`) |
-| `rm`            | Supprimer un fichier ou dossier (`rm fichier`, `rm -r dossier`) |
-| `mv`            | Déplacer ou renommer (`mv fichier dossier`) |
-| `mkdir`         | Créer un répertoire (`mkdir nomDossier`) |
-| `man`           | Affiche le manuel d’une commande (`man commande`) |
-| `touch`         | Créer un fichier vide (`touch nomFichier`) |
-| `chmod`         | Modifier les autorisations d’un fichier |
-| `./fichier`     | Exécuter un fichier exécutable |
-| `exit`          | Quitter la session terminal |
-| `sudo`          | Exécuter en tant que superutilisateur |
-| `apt`, `yum`, `pacman` | Gestionnaires de paquets |
-| `cat`           | Affiche le contenu d’un fichier |
-| `ps`            | Affiche les processus en cours |
-| `history`       | Affiche l’historique des commandes |
-| `tail`          | Affiche les dernières lignes d’un fichier |
-| `head`          | Affiche les premières lignes d’un fichier |
-| `grep`          | Recherche une chaîne dans un fichier |
+| Commande                  | Description |
+|---------------------------|-------------|
+| `ls` / `ls -l` / `ls -a` | Lister le contenu d’un répertoire (+ détails / fichiers cachés) |
+| `pwd`                     | Afficher le répertoire de travail actuel |
+| `cd chemin`               | Changer de répertoire (`cd ..` = remonter, `cd -` = précédent) |
+| `cp fichier1 fichier2`    | Copier un fichier |
+| `rm fichier`              | Supprimer un fichier |
+| `rm -r dossier`           | Supprimer un dossier et son contenu |
+| `rm -rf dossier` ⚠️       | Suppression forcée et récursive (**dangereux**) |
+| `mv source cible`         | Déplacer ou renommer |
+| `mkdir nomDossier`        | Créer un répertoire |
+| `man commande`            | Afficher le manuel d’une commande |
+| `touch nomFichier`        | Créer un fichier vide |
+| `cat fichier`             | Afficher le contenu d’un fichier |
+| `./fichier`               | Exécuter un fichier exécutable |
+| `exit`                    | Quitter la session terminal |
+| `sudo commande`           | Exécuter en tant que superutilisateur |
+| `apt install paquet`      | Installer un paquet (Ubuntu/Debian) <br> *(autres distributions : `yum`, `pacman`)* |
+| `history`                 | Afficher l’historique des commandes |
+
+---
+
+## 📂 Navigation & gestion de fichiers
+
+| Commande          | Description |
+|-------------------|-------------|
+| `tree`            | Afficher l’arborescence (si installé) |
+| `stat fichier`    | Détails complets sur un fichier |
+| `lsblk`           | Lister les périphériques de stockage |
+| `df -h`           | Espace disque utilisé/libre |
+| `du -sh dossier`  | Taille d’un dossier |
+
+---
+
+## 📑 Manipulation de texte
+
+| Commande                 | Description |
+|--------------------------|-------------|
+| `less fichier`           | Lire un fichier page par page |
+| `head fichier`           | Afficher les premières lignes |
+| `tail fichier`           | Afficher les dernières lignes |
+| `tail -f fichier.log`    | Suivre un fichier en temps réel |
+| `grep "mot" fichier`     | Rechercher un mot |
+| `grep -r "mot" dossier`  | Recherche récursive |
+| `nano fichier`           | Éditer un fichier (éditeur simple) |
+| `vim fichier`            | Éditer un fichier (éditeur avancé) |
+| `echo "texte" >> fichier`| Ajouter du texte à un fichier |
+
+---
+
+## ⚙️ Système & processus
+
+| Commande            | Description |
+|---------------------|-------------|
+| `ps`                | Afficher les processus en cours |
+| `top`               | Surveiller les processus (en temps réel) |
+| `htop`              | Version améliorée de `top` (si installé) |
+| `kill PID`          | Tuer un processus par son ID |
+| `kill -9 PID` ⚠️    | Forcer l’arrêt d’un processus |
+| `uname -a`          | Infos système |
+| `whoami`            | Nom de l’utilisateur courant |
+| `uptime`            | Depuis combien de temps le système tourne |
+
+---
+
+## 🌐 Réseau
+
+| Commande            | Description |
+|---------------------|-------------|
+| `ping site.com`     | Tester la connexion réseau |
+| `curl url`          | Télécharger ou requêter une ressource |
+| `wget url`          | Télécharger un fichier |
+| `ifconfig` / `ip a` | Afficher les interfaces réseau |
+| `netstat -tulnp`    | Ports et connexions en écoute |
 
 ---
 
