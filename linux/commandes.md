@@ -8,7 +8,7 @@ Ce document rassemble les commandes essentielles pour utiliser efficacement un t
 
 ## 📌 Sommaire
 
-1. [Commandes de base](#commandes-de-base)
+1. [Commandes de base](#🧰-commandes-de-base)
 2. [Navigation & gestion de fichiers](#navigation--gestion-de-fichiers)
 3. [Manipulation de texte](#manipulation-de-texte)
 4. [Système & processus](#système--processus)
