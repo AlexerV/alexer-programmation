@@ -24,6 +24,14 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [Discord.py](./discord.py/README.md) → création de bot discord
 - [Linux](./linux/README.md) → installation WSL, commandes
 
+## 📚 Ce qui arrive prochainement...
+- Ruby
+- Go (Goland)
+- Rust
+- PHP
+- R
+- Koltin
+
 ---
 
 ## 🚀 Utilisation rapide
