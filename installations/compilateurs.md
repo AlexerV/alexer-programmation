@@ -16,6 +16,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 - [☕ Java](#-java)
 - [🌐 JavaScript (Node.js)](#-javascript-nodejs)
 - [🐍 Python](#-python)
+- [💎 Ruby](#-ruby)
 
 ---
 
@@ -133,4 +134,28 @@ print("Hello, world!")
 ### Exécution
 ```bash
 python3 hello.py
+```
+
+---
+
+## 💎 Ruby
+### Installation
+```bash
+sudo apt update
+sudo apt install ruby-full
+```
+
+> Vérifie que Ruby est bien installé :
+```bash
+ruby -v
+```
+
+### Exemple `hello.rb`
+```rb
+puts "Hello, world!"
+```
+
+### Exécution
+```bash
+ruby hello.rb
 ```
