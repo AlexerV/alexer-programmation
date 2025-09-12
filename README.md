@@ -18,6 +18,7 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [CSS](./css/README.md) → mise en page
 - [JavaScript](./javascript/README.md) → interaction
 - [Java](./java/README.md)
+- [Ruby](./ruby/README.md)
 
 
 ## 📚 Autres disponibilités
@@ -25,7 +26,6 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [Linux](./linux/README.md) → installation WSL, commandes
 
 ## 📚 Ce qui arrive prochainement...
-- Ruby
 - Go (Goland)
 - Rust
 - PHP
