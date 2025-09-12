@@ -44,10 +44,7 @@ ruby mon_fichier.rb
 - ✅ Boucles (`while` / `for` / `each`)
 - ✅ Méthodes (fonctions)
 - ✅ Tableaux et Hash (dictionnaires)
-- ✅ Notions de classes et objets
-- ✅ Gestion de fichiers
-- ✅ Utilisation de gems (bibliothèques externes)
-- ✅ Exemple de script complet
+- ✅ Case/When
 
 ---
 
