@@ -172,7 +172,7 @@ sudo apt install php
 
 > Vérifie que PHP est bien installé :
 ```bash
-> php -v
+php -v
 ```
 
 ### Exemple `hello.php`
