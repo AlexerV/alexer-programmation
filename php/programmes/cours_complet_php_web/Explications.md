@@ -7,4 +7,4 @@ php -S localhost:8000
 
 Aller sur un navigateur et aller sur [http://localhost:8000/](http://localhost:8000/)
 
-![resultat](php/images/resultat_cours_phpweb.png)
+![resultat](https://github.com/AlexerV/alexer-programmation/blob/main/php/images/resultat_cours_phpweb.png)
