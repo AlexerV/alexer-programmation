@@ -8,3 +8,5 @@ php -S localhost:8000
 Aller sur un navigateur et aller sur [http://localhost:8000/](http://localhost:8000/)
 
 ![resultat](https://github.com/AlexerV/alexer-programmation/blob/main/php/images/resultat_cours_phpweb.png)
+
+> ⚠️ Dans cet exemple, mon fichier se nomme `index.php`
