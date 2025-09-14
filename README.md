@@ -19,6 +19,7 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [JavaScript](./javascript/README.md) → interaction
 - [Java](./java/README.md)
 - [Ruby](./ruby/README.md)
+- [PHP](./php/README.md)
 
 
 ## 📚 Autres disponibilités
@@ -28,7 +29,6 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 ## 📚 Ce qui arrive prochainement...
 - Go (Goland)
 - Rust
-- PHP
 - R
 - Koltin
 
