@@ -17,6 +17,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 - [🌐 JavaScript (Node.js)](#-javascript-nodejs)
 - [🐍 Python](#-python)
 - [💎 Ruby](#-ruby)
+- [🐘 PHP](#-php)
 
 ---
 
@@ -159,3 +160,36 @@ puts "Hello, world!"
 ```bash
 ruby hello.rb
 ```
+
+---
+
+## 🐘 PHP
+### Installation
+```bash
+sudo apt update
+sudo apt install php
+```
+
+> Vérifie que PHP est bien installé :
+```bash
+> php -v
+```
+
+### Exemple `hello.php`
+```php
+<?php
+echo "Hello, world!";
+?>
+```
+
+### Exécution en ligne de commande
+```bash
+php hello.php
+```
+
+### Exécution en mode serveur local
+PHP intègre un petit serveur web pratique pour les tests :
+```bash
+php -S localhost:8000
+```
+Puis ouvre ton navigateur à l’adresse 👉 [http://localhost:8000/hello.php](http://localhost:8000/hello.php)
