@@ -18,6 +18,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 - [🐍 Python](#-python)
 - [💎 Ruby](#-ruby)
 - [🐘 PHP](#-php)
+- [🦀 Rust](#-rust)
 
 ---
 
@@ -193,3 +194,52 @@ PHP intègre un petit serveur web pratique pour les tests :
 php -S localhost:8000
 ```
 Puis ouvre ton navigateur à l’adresse 👉 [http://localhost:8000/hello.php](http://localhost:8000/hello.php)
+
+---
+
+## 🦀 Rust
+### Installation
+```bash
+sudo apt update
+sudo apt install rustup       # Installe rustup (gestionnaire Rust)
+sudo apt install rustc        # Installe le compilateur Rust
+rustup default stable         # Définit la version stable par défaut
+```
+
+> Vérifie que Rust est bien installé :
+```bash
+rustc --version
+cargo --version
+```
+
+### Exemple `hello.rs`
+```rust
+fn main() {
+    println!("Hello, world!");
+}
+```
+
+### Compilation et exécution avec rustc
+```bash
+# Compiler
+rustc hello.rs
+
+# Exécuter
+./hello
+```
+
+### Compilation et exécution avec Cargo (recommandé)
+```bash
+# Créer un projet
+cargo new mon_projet
+cd mon_projet
+
+# Compiler le projet
+cargo build
+
+# Exécuter le projet
+cargo run
+```
+> Pourquoi privilégier Cargo ?
+> - `rustc` compile un seul fichier, il ne gère pas les dépendances ni le fichier `Cargo.toml`.
+> - Cargo compile l’intégralité du projet, télécharge les dépendances et applique les bonnes pratiques (édition 2021 par défaut, optimisation, etc.).
