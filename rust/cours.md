@@ -596,3 +596,27 @@ cargo run
 - Sans `Cargo`, les dépendances comme **Tokio** ou **async-std** ne seront pas téléchargées.
 - Par défaut, `rustc` compile en édition 2015, ce qui peut poser problème avec du code moderne (`async/await` vient avec l’édition 2018+).
 > 👉 Donc pour tout projet qui utilise des **librairies externes**, passe toujours par Cargo.
+
+---
+
+- Constantes et immutabilité
+  - Déclaration de constantes (const) ou de valeurs immuables (static)
+- Déclaration de constantes (const) ou de valeurs immuables (static)
+  - Rust permet de réutiliser le même nom pour une variable, éventuellement avec un type différent
+- Pattern Matching avancé
+  - match peut être combiné avec des plages et des bindings
+- Tuples
+  - Permettent de stocker plusieurs valeurs de types différents
+- Slices dynamiques et références
+  - Déjà vu pour les tableaux, mais tu peux préciser que les slices peuvent pointer sur une partie d’un vecteur
+- Méthodes sur structs et enums
+  - Rust permet de définir des méthodes dans impl
+  - Pour enums
+- Crates externes
+  - Avec Cargo, tu peux utiliser des bibliothèques externes (crates)
+- Assertions et tests unitaires
+  - Rust encourage les tests intégrés
+  - Tester avec
+  ```bash
+  cargo test
+  ```
