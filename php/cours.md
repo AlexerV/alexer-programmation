@@ -369,3 +369,43 @@ switch ($jour) {
 - Utiliser `===` plutôt que `==` pour éviter les comparaisons imprécises (égalité stricte).
 - Organiser son code en plusieurs fichiers (`include`, `require`).
 - Commenter son code (`//` ou `/* ... */`) pour améliorer la lisibilité.
+
+---
+
+à ajouter :
+- Superglobales avancées
+  - $_GET, $_POST, $_REQUEST → récupérer les données des formulaires ou URL
+  - $_SESSION → stocker des données entre les pages
+  - $_COOKIE → gérer des cookies
+  - $_SERVER → informations sur le serveur et la requête
+  - $_FILES → gérer les fichiers uploadés
+- Sessions et cookies
+  - Créer un cookie
+  - Supprimer un cookie
+- Formulaires sécurisés
+  - Toujours valider et nettoyer les données reçues pour éviter les failles
+  - Protection contre les injections SQL (préparer les requêtes avec PDO ou MySQLi)
+- Fonctions avancées
+  - Paramètres par défaut
+  - Fonctions anonymes / closures
+  - Passage par référence
+- Gestion d’erreurs
+  - try…catch pour attraper les exceptions
+  - error_reporting() et ini_set() pour configurer l’affichage des erreurs
+- Programmation orientée objet
+  - Classes, objets, propriétés et méthodes
+  - Héritage
+  - Encapsulation, getter/setter, visibilité public, private, protected
+- Tableaux avancés
+  - Tableaux multidimensionnels
+  - Fonctions utiles
+- Manipulation de fichiers
+  - Lire un fichier
+  - Écrire dans un fichier
+  - Vérifier si un fichier existe
+- JSON et API
+  - Convertir objet ↔ JSON
+  - Utile pour créer ou consommer des API REST
+- PDO et bases de données
+  - Connexion sécurisée à MySQL
+  - Prévenir les injections SQL avec prepare et execute
