@@ -1,5 +1,8 @@
 # 🛠️ Installation des compilateurs sur Linux
 
+[![GitHub](https://img.shields.io/badge/GitHub-AlexerV-181717?logo=github)](https://github.com/AlexerV)
+![Discord](https://img.shields.io/badge/Discord-.alexer-5865F2?logo=discord&logoColor=white)
+
 Ce document te guide pour installer les compilateurs/interpréteurs nécessaires pour différents langages de programmation sur une distribution Linux (ex : Ubuntu/Debian).
 > 💡 Utilise `sudo` si tu n’es pas root.
 
