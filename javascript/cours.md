@@ -312,3 +312,33 @@ Exemple :
 - Un exemple avec un fichier [Javascript](https://github.com/AlexerV/alexer-programmation/tree/main/javascript/programmes/Exemple%20Node%20%20DOM)
 
 > Avec un fichier `.html`, le DOM correspond à la page affichée dans le navigateur. Avec un fichier `.js` exécuté par Node.js, on peut simuler un DOM (ex. avec *jsdom*) pour manipuler du HTML directement depuis le terminal.
+
+---
+
+à ajouter :
+- ES6+
+  - Template literals pour les chaînes de caractères
+  - Déstructuration pour extraire facilement des valeurs
+  - Paramètres par défaut dans les fonctions
+  - Opérateur de coalescence nulle (??)
+  - Opérateur optionnel (?.) pour éviter les erreurs sur undefined/null
+- Fonctions avancées
+  - Fonctions récursives (s’appellent elles-mêmes)
+  - Closures (fonctions qui gardent l’accès à leur contexte)
+- Tableaux et objets avancés
+  - Méthodes utiles pour tableaux
+  - Spread et rest operators (...)
+- Asynchrone et Promises
+  - Callbacks : fonctions passées en paramètre pour exécuter du code plus tard
+  - Promises pour gérer l’asynchrone
+  - Async / await (syntaxe moderne pour Promises)
+- Modules JS
+  - ES Modules (import / export) pour organiser le code
+- Manipulation DOM avancée
+  - Créer et ajouter des éléments
+  - Écouteurs d’événements
+  - Classes CSS dynamiques
+- LocalStorage et SessionStorage
+- JSON et API
+  - Convertir objet ↔ JSON
+  - Appels API avec fetch
