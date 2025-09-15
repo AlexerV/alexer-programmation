@@ -261,3 +261,25 @@ else
   puts "Jour inconnu"
 end
 ```
+
+---
+
+- Types avancés
+  - Symbols : objets légers utilisés comme clés dans les Hash
+  - Ranges (plages)
+  - Nil et Boolean
+- Méthodes avancées
+  - Paramètres par défaut
+  - Arguments variables
+  - Retour multiple
+- Blocs, Procs et Lambdas
+  - Bloc simple
+  - Proc
+  - Lambda
+- Classes et POO
+  - Héritage
+- Exceptions
+- Fichiers
+- Modules et namespaces
+  - Définition d’un module
+  - Inclusion dans une classe
