@@ -67,6 +67,184 @@ h1, h2, h3 {
 
 ---
 
+## Sélecteurs avancés
+### Sélecteurs d’attributs
+```css
+input[type="text"] {
+  border: 1px solid gray;
+}
+```
+> Permet de cibler les éléments selon leurs attributs (type, name, etc.).
+
+### Sélecteurs de pseudo-classes avancés
+```css
+li:first-child { font-weight: bold; }
+li:last-child { color: red; }
+li:nth-child(2n) { background-color: #f0f0f0; }  /* tous les éléments pairs */
+```
+
+### Combinateurs
+- `E F` : descendant
+- `E > F` : enfant direct
+- `E + F` : frère immédiat
+- `E ~ F` : frère général
+
+---
+
+## Couleurs et unités
+### Unités CSS utiles
+- `px` : pixels (fixe)
+- `%` : pourcentage de l’élément parent
+- `em` : relatif à la taille de police de l’élément
+- `rem` : relatif à la taille de police de l’élément racine (`html`)
+- `vh`, `vw` : pourcentage de la hauteur/largeur de la fenêtre
+> Exemple : `font-size: 2rem;` → 2 fois la taille de police racine.
+
+### Dégradés
+```css
+background: linear-gradient(to right, red, yellow);
+background: radial-gradient(circle, blue, lightblue);
+```
+
+---
+
+## Texte avancé
+### Casser les mots :
+```css
+word-wrap: break-word;
+overflow-wrap: break-word;
+```
+
+### Ombrage du texte :
+```css
+text-shadow: 2px 2px 5px gray;
+```
+
+### Police personnalisée :
+```css
+@font-face {
+  font-family: 'MaPolice';
+  src: url('maPolice.ttf');
+}
+p { font-family: 'MaPolice', sans-serif; }
+```
+
+---
+
+## Box model et display
+### Boîte flexible
+```css
+box-sizing: border-box;
+```
+> Inclut padding et border dans la largeur totale, pratique pour les layouts modernes.
+
+### Display
+- `inline` : ne prend que l’espace nécessaire
+- `block` : prend toute la largeur disponible
+- `inline-block` : inline mais avec hauteur/largeur personnalisables
+- `none` : cache l’élément
+
+---
+
+## Positionnement avancé
+### Z-index : contrôle l’empilement
+```css
+div { position: absolute; z-index: 10; }
+```
+
+### Sticky : position collante
+```css
+header { position: sticky; top: 0; }
+```
+> L’élément reste visible jusqu’à ce que son conteneur soit hors de la vue.
+
+---
+
+## Flexbox complémentaire
+### Alignement
+```css
+flex-wrap: wrap;             /* retour à la ligne si nécessaire */
+align-content: space-between; /* alignement multi-lignes */
+```
+
+### Ordre
+```css
+.item1 { order: 2; }
+.item2 { order: 1; }
+```
+> Permet de réorganiser les éléments sans changer le HTML.
+
+---
+
+## Grid complémentaire
+### Zones nommées
+```css
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+```
+
+### Répartition flexible
+```css
+grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+grid-template-rows: auto 200px auto;
+```
+
+---
+
+## Transitions et animations avancées
+### Transitions multiples
+```css
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+```
+
+### Animation infinie
+```css
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.logo { animation: rotate 2s linear infinite; }
+```
+
+---
+
+## Responsive design avancé
+### Media Queries pour orientation
+```css
+@media (orientation: portrait) {
+  body { background-color: lightpink; }
+}
+```
+
+### Breakpoints courants
+```css
+/* smartphone */
+@media (max-width: 480px) { ... }
+/* tablette */
+@media (max-width: 768px) { ... }
+/* desktop */
+@media (min-width: 1024px) { ... }
+```
+
+### Unités relatives
+```css
+width: 80vw;   /* 80% de la largeur de la fenêtre */
+font-size: 2rem;
+```
+
+---
+
 ## Propriétés de base
 ### Couleurs
 ```css
