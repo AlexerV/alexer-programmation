@@ -40,6 +40,35 @@ echo -e "valeur de var1: $var1\nvaleur de var2: $var2\nvaleur de var3: $var3\nva
 
 ---
 
+## Variables avancées
+### Variables d’environnement : utilisées par le shell et les programmes lancés depuis le script
+```bash
+export MON_ENV="valeur"
+echo $MON_ENV
+```
+> Utile pour partager des valeurs entre plusieurs scripts ou commandes.
+
+### Variables readonly (non modifiables) : empêchent toute modification après déclaration
+```bash
+readonly PI=3.14
+```
+> Bon pour protéger les constantes dans vos scripts.
+
+### Variables avec valeur par défaut : pratique si une variable n’est pas définie
+```bash
+echo ${VAR:-"valeur_par_defaut"}
+```
+> Si `VAR` n’existe pas, le shell utilise `"valeur_par_defaut"`.
+
+### Substitution de commande : stocke le résultat d’une commande dans une variable.
+```bash
+date=$(date)
+echo "La date actuelle est : $date"
+```
+> Permet de récupérer dynamiquement des infos système.
+
+---
+
 ## Opérations arithmétiques
 
 ```bash
@@ -47,6 +76,30 @@ expr 3 + 5       # Affiche 8
 expr $a \* $b    # Multiplie $a et $b (ex: 3 * 2)
 ```
 > Note : L’astérisque doit être échappé avec un backslash `\*` ou placé entre guillemets `"*"`.
+
+---
+
+## Manipulation de chaînes
+### Accès aux caractères ou sous-chaînes :
+```bash
+texte="Bonjour"
+echo ${texte:0:3}  # "Bon"
+```
+> Très utile pour extraire une partie d’une chaîne.
+
+### Longueur d’une chaîne :
+```bash
+texte="Bonjour"
+echo ${#texte}  # 7
+```
+> Permet de vérifier ou limiter la taille d’une entrée utilisateur.
+
+### Remplacement dans une chaîne :
+```bash
+texte="Bonjour"
+echo ${texte/B/j}  # "jonjour"
+```
+> Pour modifier rapidement un texte sans créer de nouvelles variables.
 
 ---
 
@@ -215,7 +268,37 @@ echo ""
 
 ---
 
-### Passage de paramètres au script
+## Tableaux (arrays)
+```bash
+fruits=("pomme" "banane" "cerise")
+echo ${fruits[0]}         # pomme
+echo ${fruits[@]}         # tous les éléments
+echo ${#fruits[@]}        # nombre d’éléments
+
+# Parcourir un tableau
+for fruit in "${fruits[@]}"; do
+  echo "J’aime $fruit"
+done
+```
+
+### Définition et accès :
+```bash
+fruits=("pomme" "banane" "cerise")
+echo ${fruits[0]}  # pomme
+```
+> Les tableaux sont très pratiques pour stocker plusieurs valeurs liées.
+
+### Parcours d’un tableau :
+```bash
+for fruit in "${fruits[@]}"; do
+  echo "J’aime $fruit"
+done
+```
+> On peut ainsi traiter tous les éléments sans répéter le code.
+
+---
+
+## Passage de paramètres au script
 ```bash
 #!/bin/bash
 echo "Tu as passé les $# paramètres suivants :"
@@ -238,7 +321,7 @@ $ ./fichier.sh 42 alexer toto 5
 
 ---
 
-### Fonctions
+## Fonctions
 
 ```bash
 #!/bin/bash
@@ -255,6 +338,22 @@ read nb2
 
 multiplier $nb1 $nb2  # Appel de la fonction
 ```
+
+---
+
+## Fonctions avec retour et paramètres
+```bash
+function additionner() {
+  local somme=$(($1 + $2))
+  echo $somme
+}
+
+resultat=$(additionner 5 7)
+echo "Résultat = $resultat"
+```
+- `$1` et `$2` sont les paramètres passés à la fonction.
+- `local` limite la portée des variables à l’intérieur de la fonction.
+- `echo` permet de retourner une valeur et la récupérer avec `$()`.
 
 ---
 
@@ -309,6 +408,20 @@ fi
 
 ---
 
+## Gestion des signaux et trap
+```bash
+trap "echo 'Script interrompu !'; exit" SIGINT
+
+echo "Appuyez sur Ctrl+C pour tester"
+while true; do
+  sleep 1
+done
+```
+- `trap` intercepte un signal (ex: `Ctrl+C`) et exécute un code.
+> Permet de faire un nettoyage ou afficher un message avant que le script ne s’arrête.
+
+---
+
 ## Redirections et pipes
 
 ### Rediriger la sortie d'une commande
@@ -342,6 +455,23 @@ commande > sortie.txt 2>&1  # Redirige la sortie ET les erreurs dans un seul fic
 
 ---
 
+## Redirections avancées
+- Rediriger uniquement la sortie standard ou les erreurs :
+```bash
+commande > sortie.txt       # stdout
+commande 2> erreur.txt      # stderr
+commande &> tout.txt        # stdout + stderr
+```
+> Important pour déboguer un script ou conserver un historique.
+
+- Pipe avec `tee` pour afficher et sauvegarder en même temps :
+```bash
+ls -l | tee fichier.txt
+```
+> Affiche le résultat à l’écran et l’enregistre dans un fichier simultanément.
+
+---
+
 ## Mots-clés Bash courants
 
 Voici une liste des mots-clés et commandes spécifiques utilisés dans ce cours, avec une courte explication pour chacun.
@@ -368,6 +498,39 @@ Voici une liste des mots-clés et commandes spécifiques utilisés dans ce cours
 | `expr`         | Permet de faire des calculs arithmétiques simples.                          |
 | `chmod`        | Change les droits d’accès à un fichier (lecture, écriture, exécution).     |
 | `./fichier.sh` | Lance un script exécutable dans le répertoire courant.                      |
+
+---
+
+## Expressions régulières / `grep` / `sed` / `awk`
+```bash
+# grep pour filtrer
+cat fichier.txt | grep "mot"
+
+# sed pour remplacer dans un fichier
+sed 's/ancien/nouveau/' fichier.txt
+
+# awk pour extraire une colonne
+awk '{print $2}' fichier.txt
+```
+
+### `grep` : recherche d’un motif dans un fichier.
+```bash
+cat fichier.txt | grep "mot"
+```
+
+### `sed` : modifier un texte en flux ou fichier.
+```bash
+sed 's/ancien/nouveau/' fichier.txt
+```
+
+### `awk` : traitement avancé de colonnes et de champs.
+```bash
+awk '{print $2}' fichier.txt
+```
+
+> Ces outils sont puissants pour automatiser la manipulation de fichiers texte.
+
+
 
 ---
 
