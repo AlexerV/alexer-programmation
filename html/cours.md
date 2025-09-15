@@ -447,65 +447,131 @@ Tu peux coller ton code HTML ou fournir une URL, et il te donnera un rapport ave
 
 ---
 
-## À ajouter :
-### 1. ✅ Formulaires avancés (complément possible)
-
-- Champs spécifiques : email, tel, url, date, color, range, etc.
-
-- Attributs required, min, max, pattern, placeholder
-
-- Groupement avec `<fieldset>` et `<legend>`
-
-- Validation HTML5
-
-### 2. ✅ Tableaux avancés
-
-- Fusion de cellules : rowspan, colspan
-
-- En-têtes de colonnes/ligne avec `<thead>`, `<tbody>`, `<tfoot>`
-
-- Accessibilité des tableaux
-
-### 3. ✅ Balises sémantiques HTML5 (rapide récapitulatif ou schéma visuel)
-
-- `<article>`, `<aside>`, `<main>`, `<nav>`, `<figure>`, `<figcaption>`
-
-### 4. ✅ Iframes
-
-- Intégration de vidéos (YouTube), cartes (Google Maps), autres pages :
+## Formulaires avancés (HTML5)
+### Types de champs supplémentaires
 ```html
-<iframe src="https://example.com" width="400" height="300"></iframe>
+<input type="email" name="email" required placeholder="ex: mail@exemple.com">
+<input type="tel" name="tel" pattern="[0-9]{10}" placeholder="0123456789">
+<input type="url" name="site" placeholder="https://exemple.com">
+<input type="date" name="anniversaire">
+<input type="color" name="couleur">
+<input type="range" name="volume" min="0" max="100">
 ```
 
-### 5. ✅ Favicon
+### Groupement avec `<fieldset>` et `<legend>`
+```html
+<fieldset>
+  <legend>Informations personnelles</legend>
+  <input type="text" name="nom" placeholder="Nom">
+  <input type="text" name="prenom" placeholder="Prénom">
+</fieldset>
+```
 
-- Comment ajouter une icône de site web dans l’onglet :
+### Validation HTML5 automatique via `required`, `min`,` max`, `pattern`
+
+---
+
+## Tableaux avancés et accessibilité
+- En-têtes avec `<thead>` / `<tbody>` / `<tfoot>`
+- Fusion de cellules : `rowspan`, `colspan`
+- Accessibilité : ajouter `scope` aux `<th>` pour aider les lecteurs d’écran
+```html
+<th scope="col">Nom</th>
+<th scope="row">Alexer</th>
+```
+
+---
+
+## Balises sémantiques HTML5
+- `<header>` : en-tête de page ou section
+- `<footer>` : pied de page
+- `<nav>` : navigation principale
+- `<main>` : contenu principal
+- `<article>` : contenu autonome (ex : un article de blog)
+- `<section>` : section logique
+- `<aside>` : contenu secondaire (ex : sidebar)
+- `<figure>` / `<figcaption>` : images avec légende
+```html
+<figure>
+  <img src="chat.jpg" alt="Chat">
+  <figcaption>Mon chat adorable</figcaption>
+</figure>
+```
+
+---
+
+## Iframes
+### Intégration de vidéos YouTube, cartes Google Maps ou pages externes
+```html
+<iframe src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" width="560" height="315" title="Vidéo YouTube"></iframe>
+```
+> Ajouter title pour l’accessibilité.
+
+---
+
+## Favicon
+### Icône affichée dans l’onglet du navigateur
 ```html
 <link rel="icon" type="image/png" href="favicon.png" />
 ```
 
-### 6. ✅ Comment structurer un site web HTML simple
+---
 
-- Avec un mini projet : page d’accueil + page contact + page à propos (avec liens internes)
+## Structure d’un site web simple
+### Exemple
+```bash
+index.html    → page d’accueil
+contact.html  → page contact
+apropos.html  → page à propos
+css/style.css → styles communs
+```
 
-### 7. ✅ Responsive Design (Introduction)
+### Lien interne :
+```html
+<a href="contact.html">Contact</a>
+```
 
-- Meta viewport (déjà vu)
+---
 
-- Balises <picture>, srcset pour images adaptables
+## Images et responsive design
+### Meta viewport déjà inclus
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
-- Introduction rapide au responsive + lien vers CSS
+### Images adaptables :
+```html
+<picture>
+  <source media="(max-width: 600px)" srcset="petite.jpg">
+  <img src="grande.jpg" alt="Exemple image">
+</picture>
+```
 
-### 8. ✅ Accessibilité web (avancé) (si tu veux aller plus loin)
+### Attribut `loading="lazy"` pour améliorer la performance
 
-- Navigation clavier
+---
 
-- Label associé aux champs (<label for="id">)
+## Accessibilité web avancée
+- Navigation clavier : tous les éléments interactifs accessibles via Tab
+- Labels associés aux champs : `<label for="id">`
+- Rôles ARIA pour les lecteurs d’écran :
+```html
+<button aria-label="Fermer le menu">X</button>
+<nav role="navigation">...</nav>
+```
 
-- Rôles ARIA plus poussés
+---
 
-### 9. ✅ Performance / bonnes pratiques
+## Performance et bonnes pratiques
+### Ordre de chargement des scripts :
+```html
+<script src="script.js" defer></script>
+<script src="script.js" async></script>
+```
 
-- Ordre de chargement des scripts (defer, async)
+### Lazy loading images :
+```html
+<img src="photo.jpg" alt="Photo" loading="lazy">
+```
 
-- Lazy loading des images : `loading="lazy"`
+### Optimiser les médias et séparer CSS / JS pour réduire le temps de chargement.
