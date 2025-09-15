@@ -20,6 +20,7 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [Java](./java/README.md)
 - [Ruby](./ruby/README.md)
 - [PHP](./php/README.md)
+- [Rust](./rust/README.md)
 
 
 ## 📚 Autres disponibilités
@@ -28,7 +29,6 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 
 ## 📚 Ce qui arrive prochainement...
 - Go (Goland)
-- Rust
 - R
 - Koltin
 
