@@ -265,3 +265,25 @@ switch (jour) {
         System.out.println("Jour inconnu");
 }
 ```
+
+---
+
+à ajouter
+- Programmation orientée objet
+  - Classe et Objet
+  - Encapsulation (getters et setters)
+  - Héritage (extends)
+  - Polymorphisme (surcharge et overriding)
+  - Abstraction et interfaces
+- Exceptions et gestion d’erreurs
+- Fichiers et entrées/sorties
+- Java 8+ (fonctionnalités modernes)
+  - Lambda expressions
+  - Streams pour manipuler les collections
+- Threads et concurrence
+- Bibliothèques utiles
+  - java.util : collections, dates, etc.
+  - java.time : API moderne pour gérer les dates/temps
+  - java.io : lecture/écriture fichiers
+  - java.nio : fichiers et chemins modernes
+  - java.net : pour la programmation réseau
