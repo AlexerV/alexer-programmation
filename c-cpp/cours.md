@@ -37,6 +37,13 @@ int main() {
 }
 ```
 
+### Activer les warnings : utile pour détecter des erreurs ou mauvaises pratiques.
+```bash
+gcc -Wall MonProgramme.c -o MonProgramme   # C
+g++ -Wall MonProgramme.cpp -o MonProgramme # C++
+```
+> ⚠️ `-Wall` active la plupart des avertissements du compilateur. Corriger ces warnings rend le code plus sûr.
+
 ---
 
 ## Les bases
@@ -140,6 +147,18 @@ printf("b = %s\n", b);                   // Hello
 | Multiplication | \*      | `5 * 3`  | 15       |
 | Division       | /       | `10 / 2` | 5        |
 | Modulo         | %       | `10 % 3` | 1        |
+
+---
+
+## Opérateurs avancés
+| Opérateur                        | Type                  | Exemple        | Résultat    |            |           |
+| -------------------------------- | --------------------- | -------------- | ----------- | ---------- | --------- |
+| `++` / `--`                      | incrément / décrément | `i++` ou `--i` | `i` +1 / -1 |            |           |
+| `+=`, `-=`, `*=`, `/=`           | affectation combinée  | `x += 5`       | `x = x + 5` |            |           |
+| `==`, `!=`, `<`, `>`, `<=`, `>=` | comparaison           | `a == b`       | vrai/faux   |            |           |
+| `&&`, \`                         |                       | `, `!\`        | logique     | `(a && b)` | vrai/faux |
+
+> Très utile pour les conditions complexes et les boucles.
 
 ---
 
@@ -252,6 +271,29 @@ int main() {
 ```
 👉 Le passage par adresse permet de modifier la variable d’origine.
 
+### Valeurs par défaut en C++ :
+```cpp
+#include <iostream>
+using namespace std;
+
+void direBonjour(string nom = "inconnu") {
+    cout << "Bonjour " << nom << endl;
+}
+
+int main() {
+    direBonjour();       // Bonjour inconnu
+    direBonjour("Alexer"); // Bonjour Alexer
+}
+```
+> Permet d’appeler une fonction avec ou sans certains paramètres.
+
+### Fonctions inline : petites fonctions pour éviter le coût d’appel.
+```cpp
+inline int carre(int x) {
+    return x*x;
+}
+```
+
 ---
 
 ## Tableaux
@@ -270,6 +312,16 @@ for (int i = 0; i < 5; i++) {
     printf("Note %d = %d\n", i, notes[i]);
 }
 ```
+
+---
+
+## Tableaux et pointeurs
+```c
+int tab[5] = {1,2,3,4,5};
+int *p = tab;   // p pointe sur le premier élément
+printf("%d\n", *(p+2)); // 3
+```
+> En C, le nom d’un tableau est déjà un pointeur vers le premier élément.
 
 ---
 
@@ -471,6 +523,56 @@ cout << "Bonjour !" << endl;
 
 ---
 
+## Chaînes en C++
+### Concaténation :
+```cpp
+string a = "Bonjour";
+string b = "Alexer";
+string c = a + " " + b;
+cout << c << endl; // Bonjour Alexer
+```
+
+### Longueur :
+```cpp
+cout << "Longueur : " << c.size() << endl;
+```
+
+### Comparaison :
+```cpp
+if(a == b) { cout << "Identiques"; }
+```
+
+### Boucle sur string :
+```cpp
+for(char ch : c) {
+    cout << ch << "-";
+}
+```
+
+---
+
+## Entrées utilisateurs avancées (C++)
+### Lecture de plusieurs mots :
+```cpp
+string nomComplet;
+getline(cin, nomComplet);
+cout << "Nom complet : " << nomComplet << endl;
+```
+> `cin` seul lit jusqu’au premier espace, `getline` lit toute la ligne.
+
+### Vérification des entrées :
+```cpp
+int age;
+cin >> age;
+if(cin.fail()) {
+    cout << "Erreur: vous devez entrer un entier." << endl;
+    cin.clear();
+    cin.ignore(1000, '\n');
+}
+```
+
+---
+
 ## Aller plus loin en C++
 ### Références
 En C++, une référence est un alias d’une variable.  
@@ -560,3 +662,49 @@ int main() {
 
 👉 Les classes sont la base de la **programmation orientée objet (POO)**.
 Elles permettent de mieux organiser le code, surtout dans des projets complexes.
+
+---
+
+## Introduction à la POO (C++)
+### Constructeur :
+```cpp
+class Personne {
+public:
+    string nom;
+    int age;
+
+    Personne(string n, int a) { nom = n; age = a; }
+
+    void afficher() { cout << nom << " a " << age << " ans\n"; }
+};
+
+int main() {
+    Personne p("Alexer", 21);
+    p.afficher();
+}
+```
+
+### Encapsulation :
+```cpp
+class Personne {
+private:
+    int age;
+public:
+    void setAge(int a) { if(a>0) age=a; }
+    int getAge() { return age; }
+};
+```
+> Les attributs privés ne peuvent être modifiés directement, ce qui sécurise les données.
+
+### Constructeur par défaut et surcharge :
+```cpp
+Personne() { nom="inconnu"; age=0; }
+```
+
+### Héritage :
+```cpp
+class Etudiant : public Personne {
+public:
+    int note;
+};
+```
