@@ -75,7 +75,7 @@ Chaque langage contient un sous-dossier `programmes/` (s’il y a des fichiers e
 Tu peux utiliser **WSL (Windows Subsystem for Linux)** pour installer un environnement Linux sans interface graphique.  
 👉 Consulte le [fichier](./linux/installation.md) pour la mise en place rapide.  
 👉 Et si tu débutes sur le terminal, jette un œil aux [commandes](./linux/commandes.md) pour les bases indispensables.  
-👉 Une fois prêt, tu peux suivre ce [fichier](./installations/compilateurs.md) pour installer les compilateurs nécessaires (C, C++, Java, Python, etc.).
+👉 Une fois prêt, tu peux suivre ce [fichier](./compilateurs.md) pour installer les compilateurs nécessaires (C, C++, Java, Python, etc.).
 
 ---
 
