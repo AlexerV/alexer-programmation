@@ -340,3 +340,40 @@ match lang:
 ```
 
 *Note : `match` est disponible à partir de **Python 3.10**.*
+
+---
+
+à ajouter :
+- Types de données avancés
+  - Tuple : liste immuable
+  - Set (ensemble) : collection non ordonnée, sans doublons
+  - Booléens : True / False
+- Listes et dictionnaires avancés
+  - Compréhension de liste
+  - Dictionnaire avec compréhension
+  - Méthodes utiles pour les listes
+- Fonctions avancées
+  - Paramètres par défaut
+  - Paramètres variables
+  - Retour multiple
+  - Fonctions lambda (anonymes)
+- Modules et packages
+  - Importer des modules intégrés
+  - Importer une fonction spécifique
+  - Installer et utiliser des packages avec pip
+- Fichiers
+  - Lecture et écriture
+  - Lecture ligne par ligne
+- Gestion des erreurs
+  - Try / Except
+  - Else et finally
+- Programmation orientée objet
+  - Héritage
+  - Encapsulation (private/protected)
+- Bibliothèques utiles
+  - Mathématiques : math, random
+  - Manipulation de dates : datetime
+  - Gestion des fichiers JSON : json
+  - Requêtes HTTP : requests
+  - Web scraping : BeautifulSoup, selenium
+  - Data Science : numpy, pandas, matplotlib
