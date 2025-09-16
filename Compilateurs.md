@@ -22,6 +22,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 - [💎 Ruby](#-ruby)
 - [🐘 PHP](#-php)
 - [🦀 Rust](#-rust)
+- [🐹 Kotlin](#-kotlin)
 
 ---
 
@@ -246,3 +247,39 @@ cargo run
 > Pourquoi privilégier Cargo ?
 > - `rustc` compile un seul fichier, il ne gère pas les dépendances ni le fichier `Cargo.toml`.
 > - Cargo compile l’intégralité du projet, télécharge les dépendances et applique les bonnes pratiques (édition 2021 par défaut, optimisation, etc.).
+
+---
+
+## 🐹 Kotlin
+### Installation
+```bash
+sudo apt update
+sudo apt install default-jdk      # Kotlin a besoin de la JVM
+sudo snap install --classic kotlin
+```
+> Vérifie que Kotlin est bien installé :
+```bash
+kotlin -version
+```
+
+### Exemple `Main.kt`
+```kotlin
+fun main() {
+    println("Hello, world!")
+}
+```
+
+### Compilation et exécution
+```bash
+# Compilation
+kotlinc Main.kt -include-runtime -d Main.jar
+
+# Exécution
+java -jar Main.jar
+```
+
+> ⚡ Contrairement à Java, Kotlin génère un .jar directement exécutable avec la JVM.
+Tu peux aussi utiliser un REPL interactif avec :
+```bash
+kotlin Main.jar
+```
