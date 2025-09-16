@@ -278,8 +278,9 @@ kotlinc Main.kt -include-runtime -d Main.jar
 java -jar Main.jar
 ```
 
-> ⚡ Contrairement à Java, Kotlin génère un .jar directement exécutable avec la JVM.
+> ⚡ Contrairement à Java, Kotlin génère un `.jar` directement exécutable avec la JVM.
+
 Tu peux aussi utiliser un REPL interactif avec :
 ```bash
-kotlin Main.jar
+kotlin
 ```
