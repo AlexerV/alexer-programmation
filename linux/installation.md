@@ -64,4 +64,4 @@ Après redémarrage :
 
 ### Et après ?
 
-Pour commencer à utiliser Linux efficacement, consultez la section (lien vers les commandes)
+Pour commencer à utiliser Linux efficacement, consultez la section pour apprendre les [commandes](./commandes.md).
