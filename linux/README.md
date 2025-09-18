@@ -21,6 +21,6 @@ Que tu sois débutant ou utilisateur intermédiaire, tu trouveras ici les outils
 
 ---
 
-## ✍️ Contributions
+## 🤝 Contributions
 
 Si tu as des suggestions, des améliorations ou des corrections à proposer, n’hésite pas à ouvrir une **issue** ou à soumettre une **pull request**.
