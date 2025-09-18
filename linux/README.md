@@ -4,18 +4,23 @@ Ce dossier contient des ressources pour utiliser Linux via WSL sous Windows, ain
 
 ---
 
-## Contenu
+## 📚 Contenu
 
 - [Installation de Linux sous Windows (WSL)](./installation.md)  
-  Guide complet pour installer une distribution Linux en ligne de commande sur Windows.
+  Un guide complet pour installer une distribution Linux en ligne de commande sous Windows via WSL.
 
 - [Commandes Linux et gestion des droits](./commandes.md)  
-  Liste des commandes courantes et explications sur les permissions avec `chmod`.
+  Une liste des commandes les plus courantes, avec une explication détaillée sur la gestion des permissions avec `chmod`.
 
 ---
 
-## À propos
+## ℹ️ À propos
 
-Ces ressources sont conçues pour t’aider à démarrer rapidement avec Linux, en mettant l’accent sur la console et les concepts clés.
+Ces ressources sont pensées pour t'aider à démarrer rapidement avec Linux, tout en te permettant de maîtriser les bases de la ligne de commande et des concepts clés.  
+Que tu sois débutant ou utilisateur intermédiaire, tu trouveras ici les outils nécessaires pour explorer et travailler efficacement sous Linux.
 
-N’hésite pas à explorer les fichiers, et à revenir vers moi si tu souhaites des compléments !
+---
+
+## ✍️ Contributions
+
+Si tu as des suggestions, des améliorations ou des corrections à proposer, n’hésite pas à ouvrir une **issue** ou à soumettre une **pull request**.
