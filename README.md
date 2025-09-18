@@ -1,4 +1,4 @@
-# 📚 Alexer - Programmation
+# 💻 Alexer - Programmation
 
 [![GitHub](https://img.shields.io/badge/GitHub-AlexerV-181717?logo=github)](https://github.com/AlexerV)
 ![Discord](https://img.shields.io/badge/Discord-.alexer-5865F2?logo=discord&logoColor=white)
@@ -11,22 +11,22 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 ---
 
 ## 📚 Langages disponibles
-- [Bash / Shell](./bash/README.md) → scripts, boucles, tests de fichiers...
-- [Python](./python/README.md) → variables, fonctions, classes, projets...
-- [C / C++](./c-cpp/README.md) → pointeurs, boucles, structures...
-- [HTML](./html/README.md) → bases du web
-- [CSS](./css/README.md) → mise en page
-- [JavaScript](./javascript/README.md) → interaction
-- [Java](./java/README.md)
-- [Ruby](./ruby/README.md)
-- [PHP](./php/README.md)
-- [Rust](./rust/README.md)
-- [Kotlin](./kotlin/README.md)
+- [Bash / Shell](./bash/README.md) → Scripts, boucles, tests de fichiers...
+- [Python](./python/README.md) → Variables, fonctions, classes, projets...
+- [C / C++](./c-cpp/README.md) → Pointeurs, boucles, structures...
+- [HTML](./html/README.md) → Bases du web
+- [CSS](./css/README.md) → Mise en page
+- [JavaScript](./javascript/README.md) → Interaction
+- [Java](./java/README.md) → Concepts Java
+- [Ruby](./ruby/README.md) → Introduction à Ruby
+- [PHP](./php/README.md) → Développement Web avec PHP
+- [Rust](./rust/README.md) → Programmation système moderne
+- [Kotlin](./kotlin/README.md) → Développement Android
 
 
-## 📚 Autres disponibilités
-- [Discord.py](./discord.py/README.md) → création de bot discord
-- [Linux](./linux/README.md) → installation WSL, commandes
+## 📚 Autres ressources disponibles
+- [Discord.py](./discord.py/README.md) → Création de bot discord
+- [Linux](./linux/README.md) → Installation WSL, commandes et environnements Linux
 
 ## 📚 Ce qui arrive prochainement...
 - Go (Goland)
@@ -50,10 +50,10 @@ Remplacer `nom_du_langage` par `bash`, `python`, `java`, etc.
 ```bash
 cd nom_du_langage/
 cat cours.md
-ou
+# Ou pour une lecture plus confortable
 less cours.md
 ```
-`less`
+Utilisation de `less` :
   - `Espace` pour avancer
   - `B` pour reculer
   - `Q` pour quitter
@@ -65,17 +65,18 @@ type cours.md
 ```
 
 3. **Exécuter un script :**
-Chaque langage contient un sous-dossier `programmes/` (s’il y a des fichiers exécutables).
+Chaque langage contient un sous-dossier `programmes/` avec des fichiers exécutables.
 
 >💡 Reporte-toi au `README.md` dans chaque dossier pour les instructions spécifiques d'exécution.
 
 ---
 
-💡 Tu es sous **Windows** mais tu veux compiler comme sur **Linux** ?  
+## ⚙️ Installation de WSL (Windows Subsystem for Linux)
+Tu es sous **Windows** mais tu veux compiler comme sur **Linux** ?  
 Tu peux utiliser **WSL (Windows Subsystem for Linux)** pour installer un environnement Linux sans interface graphique.  
-👉 Consulte le [fichier](./linux/installation.md) pour la mise en place rapide.  
-👉 Et si tu débutes sur le terminal, jette un œil aux [commandes](./linux/commandes.md) pour les bases indispensables.  
-👉 Une fois prêt, tu peux suivre ce [fichier](./Compilateurs.md) pour installer les compilateurs nécessaires (C, C++, Java, Python, etc.).
+1. Consulte le guide pour installer [WSL rapidement](./linux/installation.md).
+2. Si tu débutes dans l'utilisation du terminal, regarde ces [commandes de base](./linux/commandes.md).
+3. Une fois prêt, suis ce [fichier](./Compilateurs.md) pour installer les compilateurs nécessaires (C, C++, Java, Python, etc.).
 
 ---
 
@@ -92,9 +93,9 @@ Tu peux aider à améliorer ce projet de plusieurs façons :
 ### 📝 Types de contributions possibles
 - Corriger des fautes ou améliorer la clarté des explications  
 - Ajouter de nouveaux exemples ou exercices pratiques  
-- Proposer des projets supplémentaires dans un langage  
-- Améliorer la structure (sommaire, navigation, organisation)  
-- Signaler des erreurs ou des points à compléter 
+- Proposer des projets supplémentaires dans un langage donné  
+- Améliorer la structure du dépôt (sommaire, navigation, organisation)  
+- Signaler des erreurs ou des parties à compléter 
 
 ### 📌 Bonnes pratiques
 - Respecter la structure existante (`README.md`, `cours.md`, `programmes/`)
