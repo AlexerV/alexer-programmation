@@ -67,9 +67,9 @@ Ce document rassemble les commandes essentielles pour utiliser efficacement un t
 | `less fichier`           | Lire un fichier page par page |
 | `head fichier`           | Afficher les premières lignes |
 | `tail fichier`           | Afficher les dernières lignes |
-| `tail -f fichier.log`    | Suivre un fichier en temps réel |
+| `tail -f fichier.log`    | Suivre un fichier en temps réel (utile pour les logs) |
 | `grep "mot" fichier`     | Rechercher un mot |
-| `grep -r "mot" dossier`  | Recherche récursive |
+| `grep -r "mot" dossier`  | Rechercher un mot dans tous les fichiers d’un dossier (recherche récursive) |
 | `nano fichier`           | Éditer un fichier (éditeur simple) |
 | `vim fichier`            | Éditer un fichier (éditeur avancé) |
 | `echo "texte" >> fichier`| Ajouter du texte à un fichier |
@@ -85,7 +85,7 @@ Ce document rassemble les commandes essentielles pour utiliser efficacement un t
 | `htop`              | Version améliorée de `top` (si installé) |
 | `kill PID`          | Tuer un processus par son ID |
 | `kill -9 PID` ⚠️    | Forcer l’arrêt d’un processus |
-| `uname -a`          | Infos système |
+| `uname -a`          | Afficher des informations système |
 | `whoami`            | Nom de l’utilisateur courant |
 | `uptime`            | Depuis combien de temps le système tourne |
 
@@ -97,9 +97,9 @@ Ce document rassemble les commandes essentielles pour utiliser efficacement un t
 |---------------------|-------------|
 | `ping site.com`     | Tester la connexion réseau |
 | `curl url`          | Télécharger ou requêter une ressource |
-| `wget url`          | Télécharger un fichier |
-| `ifconfig` / `ip a` | Afficher les interfaces réseau |
-| `netstat -tulnp`    | Ports et connexions en écoute |
+| `wget url`          | Télécharger un fichier depuis une URL |
+| `ifconfig` / `ip a` | Afficher les interfaces réseau et leur configuration |
+| `netstat -tulnp`    | Afficher les ports et connexions réseau en écoute |
 
 ---
 
@@ -109,7 +109,7 @@ Ce document rassemble les commandes essentielles pour utiliser efficacement un t
 
 - **u** – utilisateur (propriétaire du fichier)
 - **g** – groupe (utilisateurs appartenant au même groupe)
-- **o** – autres (tout le reste)
+- **o** – autres (tous les autres utilisateurs)
 - **a** – tous les utilisateurs (user + group + others)
 
 ### Types de droits
