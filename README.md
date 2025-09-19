@@ -31,6 +31,9 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 ## 📚 Ce qui arrive prochainement...
 - Go (Goland)
 - R
+- C#
+- Swift
+- SQL
 
 ---
 
