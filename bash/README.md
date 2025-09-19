@@ -13,7 +13,7 @@ Ce dossier contient un **cours complet sur le shell Bash**, destiné aux débuta
 ## 📂 Contenu
 
 - `cours.md` : le guide principal, structuré étape par étape
-- `programmes/` : (optionnel) quelques scripts Bash prêts à exécuter
+- `programmes/` : quelques scripts Bash prêts à exécuter
 
 ## 📦 Pré-requis
 
