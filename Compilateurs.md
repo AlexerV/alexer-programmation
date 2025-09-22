@@ -23,6 +23,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 - [🐘 PHP](#-php)
 - [🦀 Rust](#-rust)
 - [🐹 Kotlin](#-kotlin)
+- [🗄️ SQL](#-sql)
 
 ---
 
@@ -284,3 +285,64 @@ Tu peux aussi utiliser un REPL interactif avec :
 ```bash
 kotlin
 ```
+
+---
+
+## 🗄️ SQL
+### Installation
+#### SQLite (léger, rapide pour débuter)
+```bash
+sudo apt update
+sudo apt install sqlite3
+```
+> Vérifie que SQLite est bien installé :
+```bash
+sqlite3 --version
+```
+
+#### MySQL (serveur complet)
+```bash
+sudo apt update
+sudo apt install mysql-server
+```
+> Vérifie que MySQL est installé et démarré :
+```bash
+mysql --version
+sudo systemctl status mysql
+```
+
+#### PostgreSQL
+```bash
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+```
+> Vérifie PostgreSQL :
+```bash
+psql --version
+sudo systemctl status postgresql
+```
+
+### Exemple `hello.sql`
+```sql
+SELECT 'Bonjour SQL !';
+```
+
+### Exécution
+#### SQLite
+```bash
+sqlite3 hello.db
+sqlite> .read hello.sql
+```
+
+#### MySQL
+```bash
+mysql -u root -p
+mysql> source hello.sql;
+```
+
+#### PostgreSQL
+```bash
+psql -U postgres
+postgres=# \i hello.sql
+```
+> ⚡ SQL n’est pas un langage compilé : il s’exécute directement dans le moteur de base de données.
