@@ -23,7 +23,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 - [🐘 PHP](#-php)
 - [🦀 Rust](#-rust)
 - [🐹 Kotlin](#-kotlin)
-- [🗄️ SQL](#-sql)
+- [🗄️ SQL](#%EF%B8%8F-sql)
 
 ---
 
