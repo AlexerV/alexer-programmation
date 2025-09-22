@@ -22,6 +22,7 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [PHP](./php/README.md) → Développement Web avec PHP
 - [Rust](./rust/README.md) → Programmation système moderne
 - [Kotlin](./kotlin/README.md) → Développement Android
+- [SQL](./sql/README.md)
 
 
 ## 📚 Autres ressources disponibles
@@ -33,7 +34,6 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - R
 - C#
 - Swift
-- SQL
 
 ---
 
