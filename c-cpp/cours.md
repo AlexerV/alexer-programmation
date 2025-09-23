@@ -7,10 +7,10 @@
 ### Compilation et exécution (Linux / WSL / macOS)
 ```bash
 gcc MonProgramme.c -o MonProgramme   # compilation C
-./MonProgramme
+./MonProgramme                       # exécution
 
 g++ MonProgramme.cpp -o MonProgramme # compilation C++
-./MonProgramme
+./MonProgramme                       # exécution
 ```
 
 ### Exemple minimal C
@@ -708,3 +708,255 @@ public:
     int note;
 };
 ```
+
+---
+
+## Gestion de la mémoire dynamique (C / C++)
+### Allocation dynamique en C
+En C, on utilise les fonctions `malloc` et `free` pour allouer et libérer de la mémoire.
+#### Allocation avec `malloc`
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr = malloc(5 * sizeof(int));  // Alloue un tableau de 5 entiers
+
+    if (ptr == NULL) {
+        printf("Échec de l'allocation\n");
+        return 1;
+    }
+
+    for (int i = 0; i < 5; i++) {
+        ptr[i] = i * 2;
+        printf("ptr[%d] = %d\n", i, ptr[i]);
+    }
+
+    free(ptr);  // Libère la mémoire allouée
+    return 0;
+}
+```
+
+#### Libération de la mémoire avec `free`
+**Important** : Après avoir utilisé `free()`, il est préférable de mettre le pointeur à `NULL` pour éviter un **dangling pointer**.
+
+### Allocation dynamique en C++ : `new` et `delete`
+En C++, la gestion de la mémoire se fait avec les opérateurs `new` et `delete`.
+#### Allocation avec `new`
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int *ptr = new int[5];  // Alloue un tableau dynamique de 5 entiers
+
+    for (int i = 0; i < 5; i++) {
+        ptr[i] = i * 2;
+        cout << "ptr[" << i << "] = " << ptr[i] << endl;
+    }
+
+    delete[] ptr;  // Libère la mémoire allouée
+    return 0;
+}
+```
+
+#### Libération avec `delete`
+**Note** : On utilise `delete[]` pour libérer un tableau dynamique créé avec `new[]` et `delete` pour une seule variable allouée avec `new`.
+
+---
+
+## Templates en C++
+Les templates permettent de définir des fonctions ou des classes génériques, capables de travailler avec différents types de données sans avoir à dupliquer le code.
+
+### Fonction template
+```cpp
+#include <iostream>
+using namespace std;
+
+template <typename T>
+T addition(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    cout << "Addition de 5 et 3 : " << addition(5, 3) << endl;  // int
+    cout << "Addition de 3.14 et 2.71 : " << addition(3.14, 2.71) << endl;  // double
+    return 0;
+}
+```
+
+### Classe template
+```cpp
+#include <iostream>
+using namespace std;
+
+template <typename T>
+class Boite {
+public:
+    T contenu;
+    Boite(T c) : contenu(c) {}
+    void afficher() {
+        cout << "Contenu : " << contenu << endl;
+    }
+};
+
+int main() {
+    Boite<int> b1(10);
+    Boite<string> b2("Hello");
+    
+    b1.afficher();
+    b2.afficher();
+    
+    return 0;
+}
+```
+
+> Les templates permettent de créer des fonctions et classes flexibles, sans répéter du code pour chaque type de données.
+
+---
+
+## Exceptions en C++
+Les exceptions sont utilisées pour gérer les erreurs de manière propre, plutôt que d'utiliser des codes de retour ou des variables globales.
+### Lancer une exception avec `throw`
+```cpp
+#include <iostream>
+using namespace std;
+
+void division(int a, int b) {
+    if (b == 0) {
+        throw "Erreur : division par zéro!";
+    }
+    cout << "Résultat : " << a / b << endl;
+}
+
+int main() {
+    try {
+        division(10, 0);
+    } catch (const char* e) {
+        cout << "Exception attrapée : " << e << endl;
+    }
+    return 0;
+}
+```
+
+### Bloc `try` / `catch`
+- Le code qui peut lancer une exception est placé dans un bloc `try`.
+- Les exceptions sont capturées dans le bloc `catch`, et peuvent être gérées selon leur type.
+
+---
+
+## Les fichiers et les streams en C++
+En C++, on utilise les classes de la bibliothèque standard `<fstream>` pour manipuler des fichiers.
+### Écriture dans un fichier avec `ofstream`
+```cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    ofstream fichier("exemple.txt");  // Ouvre le fichier pour écrire
+
+    if (fichier) {
+        fichier << "Ceci est un exemple.\n";
+        fichier << "Bienvenue dans le C++!\n";
+        fichier.close();
+    } else {
+        cout << "Impossible d'ouvrir le fichier en écriture\n";
+    }
+    return 0;
+}
+```
+
+### Lecture depuis un fichier avec `ifstream`
+```cpp
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    ifstream fichier("exemple.txt");  // Ouvre le fichier pour lire
+
+    if (fichier) {
+        string ligne;
+        while (getline(fichier, ligne)) {
+            cout << ligne << endl;
+        }
+        fichier.close();
+    } else {
+        cout << "Impossible d'ouvrir le fichier en lecture\n";
+    }
+    return 0;
+}
+```
+
+---
+
+## Gestion des erreurs avec `errno` en C
+En C, les erreurs système sont souvent signalées par le code d'erreur global `errno`, que l'on peut utiliser pour identifier le type d'erreur.
+### Exemple d'utilisation de `errno`
+```c
+#include <stdio.h>
+#include <errno.h>
+#include <string.h>
+
+int main() {
+    FILE *fichier = fopen("inexistant.txt", "r");
+    
+    if (fichier == NULL) {
+        printf("Erreur : %s\n", strerror(errno));  // Affiche le message d'erreur
+    }
+    
+    return 0;
+}
+```
+
+> Les erreurs telles que "fichier non trouvé" ou "erreur d'allocation mémoire" sont définies dans l'en-tête `<errno.h>`.
+
+---
+
+## Threads en C++ (multithreading)
+Le multithreading permet d'exécuter plusieurs tâches en parallèle dans un programme, ce qui peut améliorer les performances, notamment dans des applications lourdes.
+### Exemple de base avec `std::thread`
+```cpp
+#include <iostream>
+#include <thread>
+using namespace std;
+
+void afficherMessage() {
+    cout << "Bonjour depuis un thread!" << endl;
+}
+
+int main() {
+    thread t(afficherMessage);  // Crée un thread
+    t.join();  // Attends que le thread se termine avant de continuer
+    return 0;
+}
+```
+- `std::thread` permet de créer des threads, et `join()` permet de s'assurer que le programme principal attend que le thread termine son exécution avant de continuer.
+
+### Synchronisation avec `mutex`
+```cpp
+#include <iostream>
+#include <thread>
+#include <mutex>
+using namespace std;
+
+mutex mtx;
+
+void afficherMessage() {
+    mtx.lock();
+    cout << "Message protégé par un mutex!" << endl;
+    mtx.unlock();
+}
+
+int main() {
+    thread t1(afficherMessage);
+    thread t2(afficherMessage);
+    
+    t1.join();
+    t2.join();
+
+    return 0;
+}
+```
+- Un mutex permet de s'assurer qu'un seul thread accède à une ressource partagée à la fois.
