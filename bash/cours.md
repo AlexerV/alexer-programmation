@@ -319,6 +319,8 @@ $ ./fichier.sh 42 alexer toto 5
 # Tous les paramètres : 42 alexer toto 5
 ```
 
+> Il existe aussi des [Variables Spéciales](cours.md#variables-spéciales--0-1--etc)
+
 ---
 
 ## Fonctions
@@ -469,6 +471,155 @@ commande &> tout.txt        # stdout + stderr
 ls -l | tee fichier.txt
 ```
 > Affiche le résultat à l’écran et l’enregistre dans un fichier simultanément.
+
+---
+
+## Gestion des erreurs et contrôle des retours de commandes
+
+En Bash, il est important de contrôler l'exécution des commandes pour s'assurer qu'elles se passent bien et réagir en cas d'échec. On peut utiliser l'opérateur `||` pour exécuter une commande si la première échoue, et `&&` pour enchaîner une commande qui ne s'exécute que si la première réussit.
+
+Exemple :
+```bash
+#!/bin/bash
+
+# Si la commande échoue, on affiche un message et on arrête le script
+commande || { echo "La commande a échoué"; exit 1; }
+
+# Si la commande réussit, on affiche un message
+command1 && echo "Command 1 succeeded" || echo "Command 1 failed"
+```
+
+- `commande || { echo "La commande a échoué"; exit 1; }` : Si la commande échoue (c'est-à-dire qu'elle retourne un code de sortie non nul), on affiche un message d'erreur et on arrête le script avec `exit 1`.
+- `command1 && echo "Command 1 succeeded" || echo "Command 1 failed"` : Si `command1` réussit, on affiche "Command 1 succeeded", sinon on affiche "Command 1 failed".
+
+---
+
+## `set -e` pour arrêter l'exécution en cas d'erreur
+
+L'option `set -e` fait en sorte que le script s'arrête dès qu'une commande échoue. Cela permet de garantir que le script ne continue pas son exécution avec des résultats incorrects ou imprévus.
+
+Exemple :
+```bash
+#!/bin/bash
+set -e  # Arrête l'exécution en cas d'erreur
+
+echo "Cette commande va échouer"
+ls nonexistentfile  # Cette commande échouera
+echo "Ce message ne sera jamais affiché"
+```
+
+- Si une commande retourne une erreur, le script s'arrête immédiatement. Dans cet exemple, la commande `ls nonexistentfile` échoue, donc le script s'arrête avant d'afficher le dernier message.
+
+---
+
+## Variables spéciales : `$0`, `$1`, `$#`, etc.
+
+Les variables spéciales en Bash permettent d'interagir avec les arguments passés au script. Par exemple :
+- `$0` : Nom du script
+- `$1`, `$2`, ... : Paramètres passés au script
+- `$#` : Nombre de paramètres passés au script
+- `$*` : Tous les paramètres passés en tant que chaîne de caractères
+- `$@` : Tous les paramètres passés, mais chaque paramètre est séparé.
+
+Exemple :
+```bash
+#!/bin/bash
+
+echo "Le nom du script est : $0"
+echo "Le premier paramètre est : $1"
+echo "Le nombre total de paramètres passés est : $#"
+echo "Tous les paramètres passés : $*"
+```
+
+- Si tu exécutes ce script avec la commande suivante :
+```bash
+./script.sh param1 param2 param3
+```
+Tu obtiendras :
+```bash
+Le nom du script est : ./script.sh
+Le premier paramètre est : param1
+Le nombre total de paramètres passés est : 3
+Tous les paramètres passés : param1 param2 param3
+```
+
+---
+
+## Redirection des erreurs et des sorties (stderr, stdout)
+En Bash, tu peux rediriger la sortie standard (stdout) et la sortie d'erreur (stderr) vers des fichiers ou d'autres commandes. Cela permet de mieux gérer les logs et les erreurs dans les scripts.
+
+Exemple :
+```bash
+#!/bin/bash
+
+# Rediriger la sortie standard (stdout) vers un fichier
+echo "Ceci est un message normal" > sortie.txt
+
+# Rediriger la sortie d'erreur (stderr) vers un fichier
+ls nonexistentfile 2> erreur.txt
+
+# Rediriger stdout et stderr dans le même fichier
+ls nonexistentfile &> tout.txt
+```
+
+- `> sortie.txt` : Redirige la sortie standard de `echo` vers le fichier `sortie.txt`.
+- `2> erreur.txt` : Redirige les erreurs (stderr) vers le fichier `erreur.txt`.
+- `&> tout.txt` : Redirige à la fois la sortie standard et les erreurs vers le fichier `tout.txt`.
+
+---
+
+## Exemple avancé de `trap` pour nettoyer après interruption
+
+Le `trap` est utilisé pour intercepter des signaux comme `SIGINT` (Ctrl+C) ou `SIGTERM` (arrêt du processus) et exécuter une commande de nettoyage avant la sortie du script.
+
+Exemple :
+```bash
+#!/bin/bash
+trap "echo 'Nettoyage'; rm -f /tmp/tempfile; exit" SIGINT SIGTERM
+
+# Créer un fichier temporaire
+echo "Fichier temporaire" > /tmp/tempfile
+echo "Appuyez sur Ctrl+C pour tester le nettoyage"
+
+# Attendre l'interruption du signal
+sleep 60
+```
+
+- Le script crée un fichier temporaire `/tmp/tempfile` et attend 60 secondes. Si tu appuies sur `Ctrl+C`, le signal `SIGINT` est intercepté, et la commande `rm -f /tmp/tempfile` est exécutée avant que le script ne se termine.
+
+---
+
+## Utilisation de `find` pour rechercher des fichiers dans un script
+
+`find` est une commande puissante qui permet de rechercher des fichiers dans un répertoire selon des critères précis. C'est particulièrement utile dans des scripts où tu veux trouver des fichiers spécifiques ou effectuer des opérations sur ceux-ci.
+
+Exemple :
+```bash
+#!/bin/bash
+
+# Rechercher tous les fichiers .txt dans le répertoire courant et afficher leur contenu
+find . -type f -name "*.txt" -exec cat {} \;
+```
+
+- `find . -type f -name "*.txt"` : Recherche tous les fichiers `.txt` dans le répertoire courant.
+- `-exec cat {} \;` : Pour chaque fichier trouvé, exécute la commande `cat` pour afficher son contenu.
+
+---
+
+## Utilisation de `xargs` pour manipuler les résultats des commandes
+
+`xargs` permet de traiter les résultats d'une commande en les passant comme arguments à une autre commande. Cela est très utile lorsqu'une commande génère une liste de résultats, que tu veux utiliser dans une autre commande.
+
+Exemple :
+```bash
+#!/bin/bash
+
+# Rechercher tous les fichiers .txt et compter les lignes
+find . -type f -name "*.txt" | xargs wc -l
+```
+
+- `find . -type f -name "*.txt"` : Recherche tous les fichiers `.txt`.
+- `| xargs wc -l` : Passe la liste des fichiers trouvés à `xargs`, qui les passe ensuite à la commande `wc -l` pour compter le nombre de lignes dans chaque fichier.
 
 ---
 
