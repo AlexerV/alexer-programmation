@@ -4,6 +4,8 @@
 
 **HTML** signifie *HyperText Markup Language*. C’est un **langage de balisage** qui permet de créer le **contenu et la structure** des pages web.  
 
+**HTML** n'est pas un langage de programmation, mais un langage de structuration. Son but est de définir les éléments d'une page web (titres, paragraphes, images, etc.). À partir de ces éléments, les autres technologies comme CSS et JavaScript prennent le relais pour ajouter des styles et des interactions.
+
 💡 Il est souvent utilisé **avec CSS** (mise en forme) et **JavaScript** (interaction).
 
 ```html
@@ -247,15 +249,10 @@ Les tableaux permettent d’organiser les données en lignes et colonnes.
 ### Éléments principaux :
 
 - `<table>` : balise du tableau
-
 - `<thead>` : entête du tableau
-
 - `<tbody>` : corps du tableau
-
 - `<tr>` : ligne
-
 - `<th>` : cellule d'entête
-
 - `<td>` : cellule normale
 
 ## Fusion de cellules :
