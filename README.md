@@ -1,7 +1,8 @@
 # 💻 Alexer - Programmation
 
 [![GitHub](https://img.shields.io/badge/GitHub-AlexerV-181717?logo=github)](https://github.com/AlexerV)
-![Discord](https://img.shields.io/badge/Discord-.alexer-5865F2?logo=discord&logoColor=white)
+![Discord](https://img.shields.io/badge/Discord-.alexer-7289da?logo=discord&logoColor=white)
+[![Discord Badge](https://img.shields.io/badge/Discord-Join%20Us-7289da?logo=discord&logoColor=white)](https://discord.gg/tz9pkUJntZ)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Contributions](https://img.shields.io/badge/Contributions-Welcome-blue.svg)
 
