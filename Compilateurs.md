@@ -24,6 +24,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 - [🦀 Rust](#-rust)
 - [🐹 Kotlin](#-kotlin)
 - [🗄️ SQL](#%EF%B8%8F-sql)
+- [🐹 Go (Golang)](#-go-golang)
 
 ---
 
@@ -346,3 +347,42 @@ psql -U postgres
 postgres=# \i hello.sql
 ```
 > ⚡ SQL n’est pas un langage compilé : il s’exécute directement dans le moteur de base de données.
+
+---
+
+## 🐹 Go (Golang)
+### Installation
+```bash
+sudo apt update
+sudo apt install golang
+```
+> Vérifie que Go est bien installé :
+```bash
+go version
+```
+
+### Exemple hello.go
+```go
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, world!")
+}
+```
+
+### Compilation et exécution
+```bash
+# Compiler le fichier
+go build hello.go
+
+# Exécuter le binaire
+./hello
+```
+> 💡 Le fichier compilé porte automatiquement le même nom que le fichier source (sans l’extension .go).
+
+### Exécution directe (sans compilation explicite)
+```bash
+go run hello.go
+```
