@@ -24,6 +24,7 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [Rust](./rust/README.md) → Programmation système moderne
 - [Kotlin](./kotlin/README.md) → Développement Android
 - [SQL](./sql/README.md)
+- [Go](./go/README.md)
 
 
 ## 📚 Autres ressources disponibles
@@ -31,7 +32,6 @@ Que tu sois débutant ou que tu veuilles revoir des bases, tu trouveras ici du c
 - [Linux](./linux/README.md) → Installation WSL, commandes et environnements Linux
 
 ## 📚 Ce qui arrive prochainement...
-- Go (Goland)
 - R
 - C#
 - Swift
