@@ -7,7 +7,7 @@ Ce document te guide pour installer les compilateurs/interpréteurs nécessaires
 > 💡 Utilise `sudo` si tu n’es pas root.
 
 💡 Si tu es sur **Windows** mais que tu veux compiler comme sur **Linux**, tu peux installer un terminal Linux minimal grâce à **WSL (Windows Subsystem for Linux)**.  
-👉 Consulte [ce guide pour installer WSL](../linux/installation.md) si ce n'est pas déjà fait.  
+👉 Consulte [ce guide pour installer WSL](./linux/installation.md) si ce n'est pas déjà fait.  
 👉 Tu peux aussi jeter un œil à [ce fichier pour les commandes Linux de base](../linux/commandes.md) afin de te familiariser avec le terminal.
 
 ---
