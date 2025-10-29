@@ -111,8 +111,14 @@ Tu peux aider à améliorer ce projet de plusieurs façons :
 
 ---
 
-📩 Contact
+## 📩 Contact
 
 Projet maintenu par [Alexer](https://github.com/AlexerV)
 Contact :
 - Discord : `.alexer`
+
+---
+
+## 🧾 Licence
+Ce projet est sous licence [MIT](./LICENSE).  
+© 2025 Alexer
