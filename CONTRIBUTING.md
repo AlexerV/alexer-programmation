@@ -11,7 +11,7 @@ Les contributions sont **les bienvenues** : corrections, ajouts de cours, exempl
 1. **Forke** ce dépôt sur ton compte GitHub  
 2. **Clone** ton fork en local :
    ```bash
-   git clone https://github.com/<ton-utilisateur>/alexer-programmation.git
+   git clone https://github.com/AlexerV/alexer-programmation.git
    cd alexer-programmation
    ```
 3. Crée une branche pour ta contribution :
